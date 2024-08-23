@@ -3,13 +3,8 @@ function capitalise(text){
 }
 
 function reverseString(text){
-    if (text =='text'){
-        return 'txet';
-    } else if (text == 'example here') {
-        return 'ereh elpmaxe';
-    } else {
-        return 'etouQ';
-    }
+    return text.split('').reverse().join('');
+
 }   
 
 module.exports = {capitalise, reverseString};
