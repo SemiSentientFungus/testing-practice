@@ -1,4 +1,4 @@
-import {capitalise} from './practice';
+import {capitalise, reverseString} from './practice';
 
 test('Capitalise single characters, expect \'a\' to return \'A\'', () =>{
     expect(capitalise('a')).toBe('A');
@@ -14,4 +14,16 @@ test('Capitalise string with multiple letters in the first word, expect \'an ide
 
 test('Returns capital when first letter is already capitalised', () =>{
     expect(capitalise('Already done')).toBe('Already done');
+})
+
+test('Returns a reversed string from \'text\' to \'txet\'', () => {
+    expect(reverseString('text')).toBe('txet');
+})
+
+test('Returns a reversed string from \'example here\' to \'ereh elpmaxe\'', () => {
+    expect(reverseString('example here')).toBe('ereh elpmaxe');
+})
+
+test('Returns a reversed string with capitals from \'Quote\' to \'etouQ\'', () => {
+    expect(reverseString('Quote')).toBe('etouQ');
 })
