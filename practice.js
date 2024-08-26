@@ -8,11 +8,7 @@ function reverseString(text){
 
 const calculator = {
     add(a, b) {
-        if (a == 2, b == 2){
-            return 4;
-        } else {
-            return 0;
-        }
+        return a + b;
     }
 }
 
