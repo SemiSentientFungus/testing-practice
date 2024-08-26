@@ -1,4 +1,4 @@
-import {capitalise, reverseString} from './practice';
+import {capitalise, reverseString, calculator} from './practice';
 
 test('Capitalise single characters, expect \'a\' to return \'A\'', () =>{
     expect(capitalise('a')).toBe('A');
@@ -24,6 +24,18 @@ test('Returns a reversed string from \'example here\' to \'ereh elpmaxe\'', () =
     expect(reverseString('example here')).toBe('ereh elpmaxe');
 })
 
+test('Returns a reversed string with numbers \'123 text here\' to equal \'ereh txet 321\'', () => {
+    expect(reverseString('123 text here')).toBe('ereh txet 321');
+})
+
 test('Returns a reversed string with capitals from \'Quote\' to \'etouQ\'', () => {
     expect(reverseString('Quote')).toBe('etouQ');
+})
+
+test('Does calculator exist?', () => {
+    expect(typeof calculator).toBe('object');
+})
+
+test('2 + 2 equals 4', () => {
+    expect(calculator.add(2, 2)).toBe(4);
 })
