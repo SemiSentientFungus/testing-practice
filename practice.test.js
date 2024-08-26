@@ -1,4 +1,4 @@
-import {capitalise, reverseString, calculator} from './practice';
+import {capitalise, reverseString, calculator, caesarCipher} from './practice';
 
 test('Capitalise single characters, expect \'a\' to return \'A\'', () =>{
     expect(capitalise('a')).toBe('A');
@@ -66,4 +66,16 @@ test('4 * 4 equals 16', () => {
 
 test('4 * 0 to equal 0', () => {
     expect(calculator.multiply(4, 0)).toBe(0);
+})
+
+test('Cipher of \'xyz\', 3 returns \'abc\'', () =>{
+    expect(caesarCipher('xyz', 3)).toBe('abc');
+})
+
+test('Cipher of \'heLLO\', 3 returns \'khOOr\'', () =>{
+    expect(caesarCipher('heLLo', 3)).toBe('khOOr');
+})
+
+test('Cipher of \'Hello, World!\', 3 returns \'Khoor, Zruog!\'', () =>{
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 })
