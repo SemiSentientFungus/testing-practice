@@ -1,8 +1,8 @@
-function capitalise(text){
+function capitalise(text) {
     return text.charAt(0).toUpperCase() + text.slice(1);
 }
 
-function reverseString(text){
+function reverseString(text) {
     return text.split('').reverse().join('');
 }   
 
@@ -21,4 +21,8 @@ const calculator = {
     }
 }
 
-module.exports = {capitalise, reverseString, calculator};
+function caesarCipher(text, val) {
+    return `${text}, ${val}`;
+}
+
+module.exports = {capitalise, reverseString, calculator, caesarCipher};
