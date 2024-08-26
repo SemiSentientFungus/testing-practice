@@ -43,3 +43,27 @@ test('2 + 2 equals 4', () => {
 test('2 + -2 equals 0', () => {
     expect(calculator.add(2, -2)).toBe(0);
 })
+
+test('2 - 2 equals 0', () => {
+    expect(calculator.subtract(2, 2)).toBe(0);
+})
+
+test('3 - -1 to equal 4', () => {
+    expect(calculator.subtract(3, -1)).toBe(4);
+})
+
+test('2 / 2 equals 1', () => {
+    expect(calculator.divide(2, 2)).toBe(1);
+})
+
+test('3 / -1 to equal -3', () => {
+    expect(calculator.divide(3, -1)).toBe(-3);
+})
+
+test('4 * 4 equals 16', () => {
+    expect(calculator.multiply(4, 4)).toBe(16);
+})
+
+test('4 * 0 to equal 0', () => {
+    expect(calculator.multiply(4, 0)).toBe(0);
+})
