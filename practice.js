@@ -4,7 +4,10 @@ function capitalise(text){
 
 function reverseString(text){
     return text.split('').reverse().join('');
-
 }   
 
-module.exports = {capitalise, reverseString};
+const calculator = {
+    
+}
+
+module.exports = {capitalise, reverseString, calculator};
