@@ -22,7 +22,29 @@ const calculator = {
 }
 
 function caesarCipher(text, val) {
-    return `${text}, ${val}`;
+    const cipher = [];
+    
+    const lowerAlph = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    let rotatedLower = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+    const upperCaseAlp = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+    let rotatedUpper = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+
+    rotatedLower = rotatedLower.splice(val).concat(rotatedLower.splice(0, val));
+    rotatedUpper = rotatedUpper.splice(val).concat(rotatedUpper.splice(0, val));
+
+    const textArr = text.split('');
+
+    textArr.forEach((element) => {
+        if(lowerAlph.includes(element)){
+            cipher.push(rotatedLower[lowerAlph.indexOf(element)]);
+        } else if (upperCaseAlp.includes(element)){
+            cipher.push(rotatedUpper[upperCaseAlp.indexOf(element)])
+        } else {
+            cipher.push(element)
+        }
+    });
+    
+    return cipher.join('');
 }
 
 module.exports = {capitalise, reverseString, calculator, caesarCipher};
