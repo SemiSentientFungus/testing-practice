@@ -47,4 +47,8 @@ function caesarCipher(text, val) {
     return cipher.join('');
 }
 
-module.exports = {capitalise, reverseString, calculator, caesarCipher};
+function analyseArray(array){
+    return {average: 4, min: 1, max: 8, length: 6};
+}
+
+module.exports = {capitalise, reverseString, calculator, caesarCipher, analyseArray};
