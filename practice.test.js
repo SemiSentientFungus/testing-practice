@@ -1,4 +1,4 @@
-import {capitalise, reverseString, calculator, caesarCipher} from './practice';
+import {capitalise, reverseString, calculator, caesarCipher, analyzeArray} from './practice';
 
 test('Capitalise single characters, expect \'a\' to return \'A\'', () =>{
     expect(capitalise('a')).toBe('A');
@@ -81,5 +81,5 @@ test('Cipher of \'Hello, World!\', 3 returns \'Khoor, Zruog!\'', () =>{
 })
 
 test('Returns object of {average: 4, min: 1, max: 8, length: 6} from the array', () => {
-    expect(analyzeArray([1,8,3,4,2,6])).toBe({average: 4, min: 1, max: 8, length: 6})
+    expect(analyzeArray([1,8,3,4,2,6])).toEqual({average: 4, min: 1, max: 8, length: 6});
 })
